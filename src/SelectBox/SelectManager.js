@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-export const SelectContext = React.createContext({ selection: "1" });
+export const SelectContext = React.createContext(1);
 
 const SelectManager = ({ children }) => {
-    const [selection, setSelection] = useState({ selection: "1" });
+  const [selection, setSelection] = useState(1);
 
-    const context = {
-        currentSelection: selection,
-        updateSelection: (value) => setSelection(state => ({ selection: value }))
-    };
+  const context = {
+    currentSelection: selection,
+    updateSelection: value => setSelection(value)
+  };
 
-    return (
-        <SelectContext.Provider value={context}>{children}</SelectContext.Provider>
-    );
+  return (
+    <SelectContext.Provider value={context}>{children}</SelectContext.Provider>
+  );
 };
 
-
 export default SelectManager;
-

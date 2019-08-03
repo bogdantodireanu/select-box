@@ -1,0 +1,29 @@
+.mainWrap {
+    margin: 0 auto;
+    padding: 0;
+    width: 20%;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.dropdown > button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin: 2px 0;
+    height: 2em;
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+}
+
+.dropdown > button:hover {
+    background-color: #00ffd5;
+}
+
+button.selected {
+    background-color: #a7a7a7;
+}
